@@ -39,8 +39,8 @@ public class PuzzleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle);
 
-        final RelativeLayout layout = findViewById(R.id.layout);
-        final ImageView imageView = findViewById(R.id.imageView);
+        final RelativeLayout layout = (RelativeLayout) findViewById(R.id.layout);
+        final ImageView imageView = (ImageView) findViewById(R.id.imageView);
 
         Intent intent = getIntent();
         final String assetName = intent.getStringExtra("assetName");
@@ -114,7 +114,7 @@ public class PuzzleActivity extends AppCompatActivity {
         int rows = 4;
         int cols = 3;
 
-        ImageView imageView = findViewById(R.id.imageView);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
         ArrayList<PuzzlePiece> pieces = new ArrayList<>(piecesNumber);
 
         // Get the scaled bitmap of the source image

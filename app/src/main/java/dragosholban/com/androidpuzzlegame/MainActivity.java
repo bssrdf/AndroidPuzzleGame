@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             final String[] files  = am.list("img");
 
-            GridView grid = findViewById(R.id.grid);
+            GridView grid = (GridView) findViewById(R.id.grid);
             grid.setAdapter(new ImageAdapter(this));
             grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
